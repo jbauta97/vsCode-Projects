@@ -306,7 +306,7 @@ class Player {
         });
         this.playerActions.querySelector('.hit').addEventListener('click', ()=>{
             this.state == 'play' && dealCard(this);
-            if (getHandValue(this.hand) > 21){
+            if (getHandValue(this.hand) >= 21){
                 this.state = 'stand';
                 dealer.evaluateTable(playerList);
             }
